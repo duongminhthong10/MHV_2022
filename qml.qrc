@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>image/bg_dkct.jpg</file>
+        <file>image/bg_floor.jpg</file>
+        <file>image/bg_main.jpg</file>
+        <file>image/bg_start.jpg</file>
+        <file>Mainview.qml</file>
+        <file>Components/Iconsunshine.qml</file>
+        <file>Components/CustomButton.qml</file>
+        <file>image/DK_toaNha/A.jpg</file>
+        <file>image/DK_toaNha/B.jpg</file>
+        <file>image/DK_toaNha/C.jpg</file>
+        <file>image/DK_toaNha/D.jpg</file>
+        <file>image/DK_toaNha/E.jpg</file>
+        <file>image/DK_toaNha/F.jpg</file>
+        <file>image/DK_toaNha/G.jpg</file>
+        <file>image/DK_toaNha/H.jpg</file>
+        <file>image/DK_toaNha/I.jpg</file>
+        <file>image/DK_toaNha/J.jpg</file>
+        <file>image/DK_toaNha/K.jpg</file>
+        <file>image/DK_toaNha/L.jpg</file>
+        <file>Components/Footer.qml</file>
+        <file>Dkct.qml</file>
+        <file>Dkhu.qml</file>
+        <file>image/bg_dkhu.jpg</file>
+        <file>Ttda.qml</file>
+        <file>viewDuAn.qml</file>
+        <file>pdf/anhGiaodien.pdf</file>
+    </qresource>
+</RCC>
