@@ -49,7 +49,7 @@ Item {
                     onClicked:
                     {
                         if (index === 5)
-                        {
+                        {                           
                             appwindow.close()
                         }
                         else if (index === 0)
@@ -63,6 +63,10 @@ Item {
                         else if (index === 2)
                         {                            
                             mainStackView.push("viewDuAn.qml")
+                        }
+                        else if (index === 3)
+                        {
+                            mainStackView.push("Videoview.qml")
                         }
                     }
                 }

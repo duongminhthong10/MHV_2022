@@ -5,7 +5,7 @@ import QtQuick.Controls 2.15
 ApplicationWindow {
     id: appwindow
     visible: true
-//    visibility: "FullScreen"
+    //    visibility: "FullScreen"
     width: 1280
     height: 800
     title: qsTr("SunShine Diamond River")
@@ -13,6 +13,9 @@ ApplicationWindow {
     property alias wW: appwindow.width
     property alias wH: appwindow.height
     property double x_default: 0.85
+    property string tablebuilding : "tblViewBuilding"
+    property string toa
+    property int soTang
     StackView {
         id: mainStackView
         anchors.fill: parent

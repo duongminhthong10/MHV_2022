@@ -36,7 +36,7 @@ Item {
                 text: qsTr("QUAY LẠI")
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pointSize: btnBack.height * 0.3
+                font.pixelSize: btnBack.height * 0.4
                 color: "white"
             }
             onClicked: mainStackView.pop()

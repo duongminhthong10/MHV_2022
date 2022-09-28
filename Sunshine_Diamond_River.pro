@@ -1,4 +1,4 @@
-QT += quick concurrent
+QT += quick concurrent quick sql
 CONFIG += c++11
 
 CONFIG += resources_big
@@ -7,6 +7,7 @@ CONFIG += resources_big
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
+        database.cpp \
         main.cpp \
         pdfprovider.cpp
 
@@ -57,4 +58,5 @@ win32 {
 #    PdfView4Qt_zh_CN.ts
 
 HEADERS += \
+    database.h \
     pdfprovider.h

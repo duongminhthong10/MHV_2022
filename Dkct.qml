@@ -13,7 +13,9 @@ Item {
         x: x_default * wW
         y: 0.287 * wH
         columns: 2
-        spacing: 0.011 * wW
+        columnSpacing: 0.011 * wW
+        rowSpacing: 0.0176 * wH
+        flow: Grid.TopToBottom
         Repeater {
             model: 12
             CustomButton
@@ -21,7 +23,9 @@ Item {
                 width: 0.062 * wW
                 height: 0.0565 * wH
                 onClicked: {
-
+                    toa = DataBase.queryTable(tablebuilding,index,"bgUrl")
+                    soTang = DataBase.queryTable(tablebuilding,index,"floorActive")
+                    mainStackView.push("viewToaNha.qml")
                 }
             }
         }

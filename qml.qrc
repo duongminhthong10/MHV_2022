@@ -27,5 +27,16 @@
         <file>Ttda.qml</file>
         <file>viewDuAn.qml</file>
         <file>pdf/anhGiaodien.pdf</file>
+        <file>Videoview.qml</file>
+        <file>video/bg.png</file>
+        <file>video/bg_video.jpg</file>
+        <file>video/pause.png</file>
+        <file>video/pause_new.png</file>
+        <file>video/play.png</file>
+        <file>video/play_new.png</file>
+        <file>video/SunshineMarinaNhaTrangBay.mp4</file>
+        <file>video/volume_down.png</file>
+        <file>video/volume_up.png</file>
+        <file>viewToaNha.qml</file>
     </qresource>
 </RCC>
