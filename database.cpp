@@ -9,7 +9,7 @@ database::database(QObject *parent)
 void database::connectDB()
 {
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/84833/Desktop/MHV2022/database.db");
+    db.setDatabaseName("database.db");
     if(db.open())
     {
         qDebug() << "da connect db";
@@ -41,5 +41,22 @@ QString database::queryTable(QString table, QString buildname, QString output)
         query.next();
         return query.value(output).toString();
     }
-    return "";
+}
+
+QString database::queryFindTang(QString table, QString buildname, QString floor, QString output)
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM " + table +" WHERE buildingName = (:buildname) AND floor = (:floor)");
+    query.bindValue(":buildname", buildname);
+    query.bindValue(":floor", floor);
+    if (!query.exec()) {
+        qDebug() << "error query";
+        qDebug() << query.lastError().text();
+        return "";
+    }
+    else
+    {
+        query.next();
+        return query.value(output).toString();
+    }
 }

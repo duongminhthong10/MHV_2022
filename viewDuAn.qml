@@ -21,12 +21,12 @@ Item {
         }
         Button
         {
+            id: btnBack
             width: 0.062 * wW
             height: 0.042 * wH
             anchors {top: parent.top; topMargin: 0.013 * wH; right: parent.right; rightMargin: 0.008 * wW}
             background: Rectangle {
                 anchors.fill: parent
-                id: btnBack
                 radius: 6
                 border.width: 1
                 border.color: "white"

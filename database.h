@@ -19,7 +19,10 @@ public:
     ~database(){};
     void connectDB();
     void closeDB();
+    // ham tim anh cac toa A, B, C,d...
     Q_INVOKABLE QString queryTable(QString table,QString buildname,QString output);
+    // ham tim anh cac tang cua tung toa
+    Q_INVOKABLE QString queryFindTang(QString table,QString buildname,QString floor,QString output);
 private:
     QSqlDatabase db;
 

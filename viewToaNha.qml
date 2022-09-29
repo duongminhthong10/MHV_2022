@@ -4,7 +4,7 @@ Item {
     Image {
         id: bg
         anchors.fill: parent
-        source: "image/DK_toaNha/" + toa
+        source: "image/DK_toaNha/" + toaUrl
     }
     Footer {}
     Grid {
@@ -19,6 +19,12 @@ Item {
             CustomButton {
                 width: 0.023 * wW
                 height: 0.04 * wH
+                onClicked: {
+                    tangMay = parseInt(index + 1).toString()
+//                    console.log("tang may: " + tangMay)
+                    tangUrl = DataBase.queryFindTang(tableFloor,toaUrl[0],(parseInt(index + 1)).toString(),"bgUrl")
+                    mainStackView.push("viewTungTang.qml")
+                }
             }
         }
     }

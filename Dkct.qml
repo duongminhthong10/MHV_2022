@@ -23,7 +23,7 @@ Item {
                 width: 0.062 * wW
                 height: 0.0565 * wH
                 onClicked: {
-                    toa = DataBase.queryTable(tablebuilding,index,"bgUrl")
+                    toaUrl = DataBase.queryTable(tablebuilding,index,"bgUrl")
                     soTang = DataBase.queryTable(tablebuilding,index,"floorActive")
                     mainStackView.push("viewToaNha.qml")
                 }

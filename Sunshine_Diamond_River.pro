@@ -31,7 +31,10 @@ CONFIG += file_copies
 pdfFile.files = $$PWD/pdf/anhGiaodien.pdf
 pdfFile.path = $$OUT_PWD
 
-COPIES += pdfFile
+dbFile.files = $$PWD/database/database.db
+dbFile.path = $$OUT_PWD
+
+COPIES += pdfFile dbFile
 
 INCLUDEPATH += $$PWD/include
 DEPENDPATH  += $$PWD/include
@@ -60,3 +63,5 @@ win32 {
 HEADERS += \
     database.h \
     pdfprovider.h
+
+DISTFILES +=
