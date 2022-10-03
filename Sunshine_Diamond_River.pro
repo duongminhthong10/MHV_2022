@@ -9,7 +9,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         database.cpp \
         main.cpp \
-        pdfprovider.cpp
+        pdfprovider.cpp \
+        tcpclient.cpp
 
 RESOURCES += qml.qrc
 
@@ -61,7 +62,9 @@ win32 {
 #    PdfView4Qt_zh_CN.ts
 
 HEADERS += \
+    config.h \
     database.h \
-    pdfprovider.h
+    pdfprovider.h \
+    tcpclient.h
 
 DISTFILES +=
