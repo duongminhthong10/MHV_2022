@@ -23,11 +23,30 @@ Item {
                 width: 0.134 * wW
 
                 onClicked: {
+                    TcpClient.send("HU0" + (parseInt(index + 1)).toString())
                     for (var i = 0; i <= 4; i++)
                     {
                         if(index === i)
                         {
                             huOption.itemAt(i).checked = true
+                            //                            switch (index)
+                            //                            {
+                            //                            case "0":
+                            //                                TcpClient.send("HU01")
+                            //                                break;
+                            //                            case "1":
+                            //                                TcpClient.send("HU02")
+                            //                                break;
+                            //                            case "2":
+                            //                                TcpClient.send("HU03")
+                            //                                break;
+                            //                            case "3":
+                            //                                TcpClient.send("HU04")
+                            //                                break;
+                            //                            case "4":
+                            //                                TcpClient.send("HU05")
+                            //                                break;
+                            //                            }
                         }
                         else
                         {

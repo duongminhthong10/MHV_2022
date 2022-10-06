@@ -3,6 +3,7 @@
 #include <QQmlContext>
 #include "pdfprovider.h"
 #include "database.h"
+#include "tcpclient.h"
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -13,7 +14,9 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     PdfProvider *pdfProvider  = new PdfProvider(QQuickImageProvider::Pixmap);
     database db;
+    TcpClient tcpClient;
     db.connectDB();
+    engine.rootContext()->setContextProperty("TcpClient", &tcpClient);
     engine.rootContext()->setContextProperty("DataBase", &db);
     engine.rootContext()->setContextProperty("PdfProvider", pdfProvider);
     engine.addImageProvider(QLatin1String("pdfpage"), pdfProvider);

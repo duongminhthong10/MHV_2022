@@ -25,6 +25,7 @@ Item {
                 onClicked: {
                     toaUrl = DataBase.queryTable(tablebuilding,index,"bgUrl")
                     soTang = DataBase.queryTable(tablebuilding,index,"floorActive")
+                    TcpClient.selectFloorOn("TC1", "TC0", index)
                     mainStackView.push("viewToaNha.qml")
                 }
             }

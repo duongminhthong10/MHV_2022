@@ -3,11 +3,15 @@ import "Components"
 Item {
     property int numRoom
     property string numRoomActive
-    property string nut1 : DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o1");
-    property string nut2 : DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o2");
-    property string nut3 : DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o3");
-    property string nut4 : DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o4");
+    property string nut1
+    property string nut2
+    property string nut3
+    property string nut4
     Component.onCompleted: {
+        nut1 = DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o1").toString()
+        nut2 = DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o2").toString()
+        nut3 = DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o3").toString()
+        nut4 = DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o4").toString()
         console.log("toa: " + toaUrl[0])
         console.log("tang: " + tangMay)
         if ((toaUrl[0] === "C" || toaUrl[0] === "G" || toaUrl[0] === "K") && ((tangMay === "36") || (tangMay === "37")))
@@ -102,6 +106,8 @@ Item {
                     case "3N":
                         mainStackView.push("viewPhongNgu3.qml")
                         break;
+                    case "null":
+                        break;
                     }
 
                 }
@@ -127,6 +133,8 @@ Item {
                         break;
                     case "D31":
                         console.log("phong Duplex d31")
+                        break;
+                    case "null":
                         break;
                     }
 
@@ -166,6 +174,8 @@ Item {
                         break;
                     case "4N":
                         mainStackView.push("viewPhongNgu4.qml")
+                        break;
+                    case "null":
                         break;
                     }
                 }
@@ -207,6 +217,8 @@ Item {
                         break;
                     case "D":
                         mainStackView.push("viewDuplex.qml")
+                        break;
+                    case "null":
                         break;
                     }
                 }

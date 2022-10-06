@@ -8,7 +8,10 @@ Item {
         y: 0.774 * wH
         width: 0.06 * wW
         height: 0.038 * wH
-        onClicked: mainStackView.pop()
+        onClicked:
+        {
+            mainStackView.pop()
+        }
     }
     CustomButton
     {
@@ -16,7 +19,10 @@ Item {
         anchors {top: btnBack.top; left: btnBack.right; leftMargin: 0.012 * wW}
         width: 0.06 * wW
         height: 0.038 * wH
-        onClicked: mainStackView.pop(null)
+        onClicked:
+        {
+            mainStackView.pop(null)
+        }
     }
 
 }

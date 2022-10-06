@@ -46,14 +46,22 @@ Item {
                 CustomButton {
                     width: 0.132 * wW
                     height: 0.056 * wH
+                    /*300s gui xong roi moi tat*/
+                    Timer {
+                        id: test
+                        interval: 10; running: false
+                        onTriggered: appwindow.close()
+                    }
                     onClicked:
                     {
                         if (index === 5)
-                        {                           
-                            appwindow.close()
+                        {
+                            TcpClient.send("HU04")
+                            test.start()
                         }
                         else if (index === 0)
                         {
+                            TcpClient.send("TC1")
                             mainStackView.push("Dkct.qml")
                         }
                         else if (index === 1)
@@ -61,7 +69,7 @@ Item {
                             mainStackView.push("Dkhu.qml")
                         }
                         else if (index === 2)
-                        {                            
+                        {
                             mainStackView.push("viewDuAn.qml")
                         }
                         else if (index === 3)
