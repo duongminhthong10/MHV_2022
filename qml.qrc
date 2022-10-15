@@ -38,7 +38,6 @@
         <file>video/volume_down.png</file>
         <file>video/volume_up.png</file>
         <file>viewToaNha.qml</file>
-        <file>database/database.db</file>
         <file>viewTungTang.qml</file>
         <file>image/DK_theoTang/A/1.jpg</file>
         <file>image/DK_theoTang/A/10.jpg</file>
@@ -486,5 +485,7 @@
         <file>viewPhongNgu3.qml</file>
         <file>viewPhongNgu4.qml</file>
         <file>viewDuplex.qml</file>
+        <file>database/database.db</file>
+        <file>BtnBackOnly.qml</file>
     </qresource>
 </RCC>

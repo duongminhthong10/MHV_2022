@@ -1,6 +1,12 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
+    property string room: "4PN"
+    Component.onCompleted: {
+        console.log("phong ngu 4")
+        console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+        TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+    }
     property var imgList: [
         "image/NoiThat/4PN/1.jpg",
         "image/NoiThat/4PN/2.jpg",
@@ -166,5 +172,5 @@ Item {
 
     }
 
-
+    BtnBackOnly{}
 }

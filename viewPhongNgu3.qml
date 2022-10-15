@@ -1,6 +1,12 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
+    property string room: "3PN"
+    Component.onCompleted: {
+        console.log("phong ngu 3")
+        console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+        TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+    }
     property var imgList: [
         "image/NoiThat/3PN/1.jpg",
         "image/NoiThat/3PN/2.jpg",
@@ -151,29 +157,30 @@ Item {
             }
         }
     }
-    Button
-    {
-        id: btnBack
-        width: 0.062 * wW
-        height: 0.042 * wH
-        anchors {top: bg.top; topMargin: 0.013 * wH; right: bg.right; rightMargin: 0.008 * wW}
-        background: Rectangle {
-            anchors.fill: parent
-            radius: 6
-            border.width: 1
-            border.color: "white"
-            color: "#9d803e"
-        }
-        contentItem: Text {
-            text: qsTr("QUAY LẠI")
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.pixelSize: btnBack.height * 0.4
-            color: "white"
-        }
-        onClicked: mainStackView.pop()
+//    Button
+//    {
+//        id: btnBack
+//        width: 0.062 * wW
+//        height: 0.042 * wH
+//        anchors {top: bg.top; topMargin: 0.013 * wH; right: bg.right; rightMargin: 0.008 * wW}
+//        background: Rectangle {
+//            anchors.fill: parent
+//            radius: 6
+//            border.width: 1
+//            border.color: "white"
+//            color: "#9d803e"
+//        }
+//        contentItem: Text {
+//            text: qsTr("QUAY LẠI")
+//            horizontalAlignment: Text.AlignHCenter
+//            verticalAlignment: Text.AlignVCenter
+//            font.pixelSize: btnBack.height * 0.4
+//            color: "white"
+//        }
+//        onClicked: mainStackView.pop()
 
-    }
+//    }
+    BtnBackOnly{}
 
 
 }

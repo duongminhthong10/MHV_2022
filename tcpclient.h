@@ -11,7 +11,7 @@ public:
     explicit TcpClient(QObject *parent = nullptr);
     Q_INVOKABLE void send(QString msg);
     Q_INVOKABLE void selectFloorOn(QString msgOnly, QString msg, QString index);
-    Q_INVOKABLE void sendOnly(int num,int inputNum);
+    Q_INVOKABLE void sendOnly(int ip, QString mess);
     Q_INVOKABLE void exit();
 
 signals:
@@ -24,9 +24,8 @@ public slots:
     QByteArray toByteArray(QString &stringList);
 private slots:
     void connectToServer();
-    void onlyConnectServer(int num);
-    void onlyExit(int num);
-
+    void onlyConnectServer(int id);
+    void onlyExit(int id);
 private:
     QTcpSocket *client;
 };

@@ -46,25 +46,13 @@ void TcpClient::selectFloorOn(QString msgOnly, QString msg, QString index)
     }
     exit();
 }
-void TcpClient::sendOnly(int num,int inputNum)
+void TcpClient::sendOnly(int ip, QString mess)
 {
-    //    if (inputNum > 0 && inputNum < 121)
-    //    {
-    //        onlyConnectServer(num);
-    //        Cong[num][inputNum - 1] = 1;
-    //        QString mess = intToQString(Cong[num]);
-    //        QString tempStr=formatRequest(mess);
-    //        //QByteArray ms=toByteArray(tempStr);
-    //        qDebug() <<"test"<<Cong<< mess;
+    onlyConnectServer(ip);
+//    QString messOut = "DKTC_" + mess;
+    (client + ip)->write(mess.toUtf8());
+    onlyExit(ip);
 
-    //        (client + num)->write(tempStr.toUtf8());
-    //        onlyExit(num);
-    //        Cong[num][inputNum - 1] = 0;
-    //    }
-    //    else
-    //    {
-    //        qDebug("Nhap lai di ban");
-    //    }
 }
 
 void TcpClient::exit()
@@ -101,16 +89,16 @@ void TcpClient::connectToServer()
 {
     for (int i = 0; i < numEsp32 ; i++)
     {
-        (client + i)->connectToHost(host + QString::number(150 + i), 8888);
+        (client + i)->connectToHost(host + QString::number(155 + i), 8888);
     }
 }
 
-void TcpClient::onlyConnectServer(int num)
+void TcpClient::onlyConnectServer(int id)
 {
-    (client + num)->connectToHost(host + QString::number(150 + num), 8888);
+    (client + id)->connectToHost(host + QString::number(155 + id), 8888);
 }
 
-void TcpClient::onlyExit(int num)
+void TcpClient::onlyExit(int id)
 {
-    (client + num)->close();
+    (client + id)->close();
 }

@@ -1,6 +1,49 @@
 import QtQuick 2.0
 import "Components"
 Item {
+    Component.onCompleted: {
+        switch (toaUrl[0])
+        {
+        case "A":
+            option = 0
+            break;
+        case "B":
+            option = 1
+            break;
+        case "C":
+            option = 2
+            break;
+        case "D":
+            option = 3
+            break;
+        case "E":
+            option = 4
+            break;
+        case "F":
+            option = 5
+            break;
+        case "G":
+            option = 6
+            break;
+        case "H":
+            option = 7
+            break;
+        case "I":
+            option = 8
+            break;
+        case "J":
+            option = 9
+            break;
+        case "K":
+            option = 10
+            break;
+        case "L":
+            option = 11
+            break;
+
+        }
+    }
+
     Image {
         id: bg
         anchors.fill: parent
@@ -50,6 +93,8 @@ Item {
                     tangMay = parseInt(index + 1).toString()
                     //                    console.log("tang may: " + tangMay)
                     tangUrl = DataBase.queryFindTang(tableFloor,toaUrl[0],(parseInt(index + 1)).toString(),"bgUrl")
+                    TcpClient.sendOnly(option,"DKTC_" + DataBase.queryDanhSachCong(tableCong,toaUrl[0],tangMay,"mapCongArray"))
+                    console.log(DataBase.queryDanhSachCong(tableCong,toaUrl[0],tangMay,"mapCongArray").toString());
                     mainStackView.push("viewTungTang.qml")
                 }
             }
