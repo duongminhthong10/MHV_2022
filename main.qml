@@ -5,7 +5,7 @@ import QtQuick.Controls 2.15
 ApplicationWindow {
     id: appwindow
     visible: true
-    //    visibility: "FullScreen"
+    visibility: "FullScreen"
     width: 1280
     height: 800
     title: qsTr("SunShine Diamond River")
@@ -25,6 +25,10 @@ ApplicationWindow {
     /*viet them*/
     property string tableCong: "tblPhong"
     property int option
+//    Component.onCompleted: {
+//        TcpClient.send("HU01")
+//    }
+
     StackView {
         id: mainStackView
         anchors.fill: parent

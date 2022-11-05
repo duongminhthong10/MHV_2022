@@ -1,4 +1,5 @@
 QT += quick concurrent quick sql
+QT += serialport
 CONFIG += c++11
 
 CONFIG += resources_big
@@ -9,6 +10,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         database.cpp \
         main.cpp \
+        myserialport.cpp \
         pdfprovider.cpp \
         tcpclient.cpp
 
@@ -64,6 +66,7 @@ win32 {
 HEADERS += \
     config.h \
     database.h \
+    myserialport.h \
     pdfprovider.h \
     tcpclient.h
 

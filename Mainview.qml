@@ -12,6 +12,9 @@ Item {
             menu.opacity = 1
         }
     }
+//    Component.onCompleted: {
+//        Uart.writeData("A")
+//    }
 
     /*Khoi Welcome*/
     Image {

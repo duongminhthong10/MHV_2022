@@ -96,6 +96,7 @@ Item {
                     TcpClient.sendOnly(option,"DKTC_" + DataBase.queryDanhSachCong(tableCong,toaUrl[0],tangMay,"mapCongArray"))
                     console.log(DataBase.queryDanhSachCong(tableCong,toaUrl[0],tangMay,"mapCongArray").toString());
                     mainStackView.push("viewTungTang.qml")
+                    Uart.writeData("N")
                 }
             }
         }

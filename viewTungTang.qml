@@ -92,6 +92,7 @@ Item {
             {
                 //                TcpClient.send("TC1")
                 TcpClient.sendOnly(option,"TC1")
+                Uart.writeData(toaUrl[0])
                 mainStackView.pop()
             }
         }

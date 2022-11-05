@@ -4,6 +4,7 @@
 #include "pdfprovider.h"
 #include "database.h"
 #include "tcpclient.h"
+#include "myserialport.h"
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -15,7 +16,9 @@ int main(int argc, char *argv[])
     PdfProvider *pdfProvider  = new PdfProvider(QQuickImageProvider::Pixmap);
     database db;
     TcpClient tcpClient;
+    MySerialPort uart;
     db.connectDB();
+    engine.rootContext()->setContextProperty("Uart",&uart);
     engine.rootContext()->setContextProperty("TcpClient", &tcpClient);
     engine.rootContext()->setContextProperty("DataBase", &db);
     engine.rootContext()->setContextProperty("PdfProvider", pdfProvider);
