@@ -79,6 +79,10 @@ Item {
                         {
                             mainStackView.push("Videoview.qml")
                         }
+                        else if (index === 4)
+                        {
+                            mainStackView.push("viewHDSD.qml")
+                        }
                     }
                 }
             }

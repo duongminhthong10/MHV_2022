@@ -3,7 +3,6 @@
         <file>main.qml</file>
         <file>image/bg_dkct.jpg</file>
         <file>image/bg_floor.jpg</file>
-        <file>image/bg_main.jpg</file>
         <file>image/bg_start.jpg</file>
         <file>Mainview.qml</file>
         <file>Components/Iconsunshine.qml</file>
@@ -34,7 +33,6 @@
         <file>video/pause_new.png</file>
         <file>video/play.png</file>
         <file>video/play_new.png</file>
-        <file>video/SunshineMarinaNhaTrangBay.mp4</file>
         <file>video/volume_down.png</file>
         <file>video/volume_up.png</file>
         <file>viewToaNha.qml</file>
@@ -225,7 +223,6 @@
         <file>image/DK_theoTang/G/19.jpg</file>
         <file>image/DK_theoTang/G/2.jpg</file>
         <file>image/DK_theoTang/G/20.jpg</file>
-        <file>image/DK_theoTang/G/21.jpg</file>
         <file>image/DK_theoTang/G/22.jpg</file>
         <file>image/DK_theoTang/G/23.jpg</file>
         <file>image/DK_theoTang/G/24.jpg</file>
@@ -328,8 +325,6 @@
         <file>image/DK_theoTang/J/33.jpg</file>
         <file>image/DK_theoTang/J/34.jpg</file>
         <file>image/DK_theoTang/J/35.jpg</file>
-        <file>image/DK_theoTang/J/36.jpg</file>
-        <file>image/DK_theoTang/J/37.jpg</file>
         <file>image/DK_theoTang/J/4.jpg</file>
         <file>image/DK_theoTang/J/5.jpg</file>
         <file>image/DK_theoTang/J/6.jpg</file>
@@ -412,17 +407,33 @@
         <file>image/DK_theoTang/L/9.jpg</file>
         <file>image/DK_theoTang/G/12A.jpg</file>
         <file>viewPhongNgu1.qml</file>
+        <file>image/next.png</file>
+        <file>image/previous.png</file>
+        <file>image/shadow.png</file>
+        <file>viewPhongNgu2.qml</file>
+        <file>viewPhongNgu3.qml</file>
+        <file>viewPhongNgu4.qml</file>
+        <file>viewDuplex.qml</file>
+        <file>database/database.db</file>
+        <file>BtnBackOnly.qml</file>
+        <file>image/bg_main.jpg</file>
+        <file>image/DK_theoTang/J/36.jpg</file>
+        <file>image/DK_theoTang/J/37.jpg</file>
+        <file>image/DK_theoTang/G/21.jpg</file>
         <file>image/NoiThat/1PN/1.jpg</file>
         <file>image/NoiThat/1PN/2.jpg</file>
         <file>image/NoiThat/1PN/3.jpg</file>
         <file>image/NoiThat/1PN/4.jpg</file>
         <file>image/NoiThat/1PN/5.jpg</file>
         <file>image/NoiThat/1PN/6.jpg</file>
+        <file>image/NoiThat/1PN/7.jpg</file>
+        <file>image/NoiThat/1PN/8.jpg</file>
+        <file>image/NoiThat/1PN/9.jpg</file>
+        <file>image/NoiThat/1PN/10.jpg</file>
+        <file>image/NoiThat/1PN/11.jpg</file>
+        <file>image/NoiThat/1PN/12.jpg</file>
+        <file>image/NoiThat/1PN/13.jpg</file>
         <file>image/NoiThat/2PN/1.jpg</file>
-        <file>image/NoiThat/2PN/10.jpg</file>
-        <file>image/NoiThat/2PN/11.jpg</file>
-        <file>image/NoiThat/2PN/12.jpg</file>
-        <file>image/NoiThat/2PN/13.jpg</file>
         <file>image/NoiThat/2PN/2.jpg</file>
         <file>image/NoiThat/2PN/3.jpg</file>
         <file>image/NoiThat/2PN/4.jpg</file>
@@ -431,14 +442,16 @@
         <file>image/NoiThat/2PN/7.jpg</file>
         <file>image/NoiThat/2PN/8.jpg</file>
         <file>image/NoiThat/2PN/9.jpg</file>
+        <file>image/NoiThat/2PN/10.jpg</file>
+        <file>image/NoiThat/2PN/11.jpg</file>
+        <file>image/NoiThat/2PN/12.jpg</file>
+        <file>image/NoiThat/2PN/13.jpg</file>
+        <file>image/NoiThat/2PN/14.jpg</file>
+        <file>image/NoiThat/2PN/15.jpg</file>
+        <file>image/NoiThat/2PN/16.jpg</file>
+        <file>image/NoiThat/2PN/17.jpg</file>
+        <file>image/NoiThat/2PN/18.jpg</file>
         <file>image/NoiThat/3PN/1.jpg</file>
-        <file>image/NoiThat/3PN/10.jpg</file>
-        <file>image/NoiThat/3PN/11.jpg</file>
-        <file>image/NoiThat/3PN/12.jpg</file>
-        <file>image/NoiThat/3PN/13.jpg</file>
-        <file>image/NoiThat/3PN/14.jpg</file>
-        <file>image/NoiThat/3PN/15.jpg</file>
-        <file>image/NoiThat/3PN/16.jpg</file>
         <file>image/NoiThat/3PN/2.jpg</file>
         <file>image/NoiThat/3PN/3.jpg</file>
         <file>image/NoiThat/3PN/4.jpg</file>
@@ -447,6 +460,14 @@
         <file>image/NoiThat/3PN/7.jpg</file>
         <file>image/NoiThat/3PN/8.jpg</file>
         <file>image/NoiThat/3PN/9.jpg</file>
+        <file>image/NoiThat/3PN/10.jpg</file>
+        <file>image/NoiThat/3PN/11.jpg</file>
+        <file>image/NoiThat/3PN/12.jpg</file>
+        <file>image/NoiThat/3PN/13.jpg</file>
+        <file>image/NoiThat/3PN/14.jpg</file>
+        <file>image/NoiThat/3PN/15.jpg</file>
+        <file>image/NoiThat/3PN/16.jpg</file>
+        <file>image/NoiThat/3PN/17.jpg</file>
         <file>image/NoiThat/4PN/1.jpg</file>
         <file>image/NoiThat/4PN/2.jpg</file>
         <file>image/NoiThat/4PN/3.jpg</file>
@@ -454,7 +475,24 @@
         <file>image/NoiThat/4PN/5.jpg</file>
         <file>image/NoiThat/4PN/6.jpg</file>
         <file>image/NoiThat/4PN/7.jpg</file>
+        <file>image/NoiThat/4PN/8.jpg</file>
+        <file>image/NoiThat/4PN/9.jpg</file>
+        <file>image/NoiThat/4PN/10.jpg</file>
+        <file>image/NoiThat/4PN/11.jpg</file>
+        <file>image/NoiThat/4PN/12.jpg</file>
+        <file>image/NoiThat/4PN/13.jpg</file>
+        <file>image/NoiThat/4PN/14.jpg</file>
+        <file>image/NoiThat/4PN/15.jpg</file>
+        <file>image/NoiThat/4PN/16.jpg</file>
         <file>image/NoiThat/DUPLEX/1.jpg</file>
+        <file>image/NoiThat/DUPLEX/2.jpg</file>
+        <file>image/NoiThat/DUPLEX/3.jpg</file>
+        <file>image/NoiThat/DUPLEX/4.jpg</file>
+        <file>image/NoiThat/DUPLEX/5.jpg</file>
+        <file>image/NoiThat/DUPLEX/6.jpg</file>
+        <file>image/NoiThat/DUPLEX/7.jpg</file>
+        <file>image/NoiThat/DUPLEX/8.jpg</file>
+        <file>image/NoiThat/DUPLEX/9.jpg</file>
         <file>image/NoiThat/DUPLEX/10.jpg</file>
         <file>image/NoiThat/DUPLEX/11.jpg</file>
         <file>image/NoiThat/DUPLEX/12.jpg</file>
@@ -465,27 +503,13 @@
         <file>image/NoiThat/DUPLEX/17.jpg</file>
         <file>image/NoiThat/DUPLEX/18.jpg</file>
         <file>image/NoiThat/DUPLEX/19.jpg</file>
-        <file>image/NoiThat/DUPLEX/2.jpg</file>
         <file>image/NoiThat/DUPLEX/20.jpg</file>
         <file>image/NoiThat/DUPLEX/21.jpg</file>
         <file>image/NoiThat/DUPLEX/22.jpg</file>
         <file>image/NoiThat/DUPLEX/23.jpg</file>
         <file>image/NoiThat/DUPLEX/24.jpg</file>
-        <file>image/NoiThat/DUPLEX/3.jpg</file>
-        <file>image/NoiThat/DUPLEX/4.jpg</file>
-        <file>image/NoiThat/DUPLEX/5.jpg</file>
-        <file>image/NoiThat/DUPLEX/6.jpg</file>
-        <file>image/NoiThat/DUPLEX/7.jpg</file>
-        <file>image/NoiThat/DUPLEX/8.jpg</file>
-        <file>image/NoiThat/DUPLEX/9.jpg</file>
-        <file>image/next.png</file>
-        <file>image/previous.png</file>
-        <file>image/shadow.png</file>
-        <file>viewPhongNgu2.qml</file>
-        <file>viewPhongNgu3.qml</file>
-        <file>viewPhongNgu4.qml</file>
-        <file>viewDuplex.qml</file>
-        <file>database/database.db</file>
-        <file>BtnBackOnly.qml</file>
+        <file>image/NoiThat/DUPLEX/25.jpg</file>
+        <file>pdf/HDSD.pdf</file>
+        <file>viewHDSD.qml</file>
     </qresource>
 </RCC>

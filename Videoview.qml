@@ -7,7 +7,7 @@ Item {
     {
         id: component_video
         Video {
-            source: "video/SunshineMarinaNhaTrangBay.mp4"
+            source: "D:/video/SunshineDiamondRiver.mp4"
             fillMode: VideoOutput.Stretch
             property bool activeStatus: Qt.application.active
             onActiveStatusChanged: {

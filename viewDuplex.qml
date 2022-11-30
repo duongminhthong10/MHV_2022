@@ -25,7 +25,8 @@ Item {
         "image/NoiThat/DUPLEX/21.jpg",
         "image/NoiThat/DUPLEX/22.jpg",
         "image/NoiThat/DUPLEX/23.jpg",
-        "image/NoiThat/DUPLEX/24.jpg"
+        "image/NoiThat/DUPLEX/24.jpg",
+        "image/NoiThat/DUPLEX/25.jpg"
     ]
     Rectangle {
         id :bg

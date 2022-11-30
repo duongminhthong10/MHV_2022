@@ -23,7 +23,8 @@ Item {
         "image/NoiThat/3PN/13.jpg",
         "image/NoiThat/3PN/14.jpg",
         "image/NoiThat/3PN/15.jpg",
-        "image/NoiThat/3PN/16.jpg"
+        "image/NoiThat/3PN/16.jpg",
+        "image/NoiThat/3PN/17.jpg"
     ]
     Rectangle {
         id :bg

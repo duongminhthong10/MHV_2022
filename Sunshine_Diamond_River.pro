@@ -34,6 +34,9 @@ CONFIG += file_copies
 pdfFile.files = $$PWD/pdf/anhGiaodien.pdf
 pdfFile.path = $$OUT_PWD
 
+pdfFile.files = $$PWD/pdf/HDSD.pdf
+pdfFile.path = $$OUT_PWD
+
 dbFile.files = $$PWD/database/database.db
 dbFile.path = $$OUT_PWD
 

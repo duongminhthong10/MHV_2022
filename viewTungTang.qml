@@ -49,7 +49,7 @@ Item {
                 break;
             case "3_4":
                 o1.opacity = 0
-                o2.visible = 0
+                o2.opacity = 0
                 break;
             case "4":
                 o1.opacity = 0
