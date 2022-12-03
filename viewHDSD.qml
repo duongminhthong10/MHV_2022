@@ -8,7 +8,7 @@ Item {
         anchors.fill: parent
         color: "#CCCCCC"
         Component.onCompleted:   {
-            PdfProvider.loadFile("HDSD.pdf",
+            PdfProvider.loadFile("D:/MHV_2022_Data/pdf/HDSD.pdf",
                                  wW, wH, 0)
             pdfModel.clear()
             for (var i=0;i<PdfProvider.pageCnt;++i) {
@@ -22,9 +22,9 @@ Item {
         Button
         {
             id: btnBack
-            width: 0.062 * wW
+            width: 0.045 * wW
             height: 0.042 * wH
-            anchors {top: parent.top; topMargin: 0.013 * wH; right: parent.right; rightMargin: 0.008 * wW}
+            anchors {bottom: parent.bottom; bottomMargin: 0.013 * wH; right: parent.right; rightMargin: 0.003 * wW}
             background: Rectangle {
                 anchors.fill: parent
                 radius: 6
@@ -36,7 +36,7 @@ Item {
                 text: qsTr("QUAY LẠI")
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pixelSize: btnBack.height * 0.4
+                font.pixelSize: btnBack.height * 0.36
                 color: "white"
             }
             onClicked: mainStackView.pop()
@@ -45,8 +45,8 @@ Item {
         Rectangle {
             id: pdfView
             visible: false
-            //        width: parent.width
-            width: 0.85 * wW
+            width: 0.9 * wW
+            //            width: 0.95 * wW
             //        height: 0.95 * wH
             anchors.top: parent.top
             anchors.bottom: parent.bottom

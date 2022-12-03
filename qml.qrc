@@ -511,5 +511,7 @@
         <file>image/NoiThat/DUPLEX/25.jpg</file>
         <file>pdf/HDSD.pdf</file>
         <file>viewHDSD.qml</file>
+        <file>viewPhongLN.qml</file>
+        <file>viewDuplex3.qml</file>
     </qresource>
 </RCC>

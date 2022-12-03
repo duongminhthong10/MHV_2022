@@ -29,6 +29,7 @@ public:
     char *Cong;
     Q_INVOKABLE QString queryDanhSachCong(QString table, QString buildname, QString floor, QString output);
     Q_INVOKABLE QString queryCacLoaiPhong(QString table, QString buildname, QString floor, QString room, QString output);
+    Q_INVOKABLE QString queryNoiThat(QString table,QString noiThat);
 private:
     QSqlDatabase db;
 

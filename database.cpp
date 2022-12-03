@@ -14,7 +14,8 @@ database::database(QObject *parent)
 void database::connectDB()
 {
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("database.db");
+//    db.setDatabaseName("database.db");
+    db.setDatabaseName("D:/MHV_2022_Data/database/database.db");
     if(db.open())
     {
         qDebug() << "da connect db";
@@ -143,4 +144,21 @@ QString database::queryCacLoaiPhong(QString table, QString buildname, QString fl
     }
     dsCong.clear();
     return out;
+}
+
+QString database::queryNoiThat(QString table, QString noiThat)
+{
+    QSqlQuery query;
+    query.prepare("SELECT * FROM " + table +" WHERE NoiThat = (:noiThat)");
+    query.bindValue(":noiThat", noiThat);
+    if (!query.exec()) {
+        qDebug() << "error query";
+        qDebug() << query.lastError().text();
+        return "";
+    }
+    else
+    {
+        query.next();
+        return query.value("NumberImg").toString();
+    }
 }

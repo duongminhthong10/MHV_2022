@@ -7,7 +7,7 @@ Item {
     {
         id: component_video
         Video {
-            source: "D:/video/SunshineDiamondRiver.mp4"
+            source: "D:/MHV_2022_Data/video/SunshineDiamondRiver.mp4"
             fillMode: VideoOutput.Stretch
             property bool activeStatus: Qt.application.active
             onActiveStatusChanged: {
@@ -31,6 +31,9 @@ Item {
         onTriggered: {
             videoControl.visible = false
             videoControl.opacity = 0
+            btnBack.visible = false
+            btnBack.opacity = 0
+
         }
     }
     MouseArea {
@@ -38,6 +41,8 @@ Item {
         onClicked: {
             videoControl.visible = true
             videoControl.opacity = 1
+            btnBack.visible = true
+            btnBack.opacity = 1
             timer.restart()
         }
     }

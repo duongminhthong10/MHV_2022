@@ -1,10 +1,10 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
-    property string room: "1PN"
+    property string room: "LN"
 //    property var imgList : []
     Component.onCompleted: {
-        console.log("phong ngu 1")
+        console.log("phong lanh nan")
         console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
         TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
     }

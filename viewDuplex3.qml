@@ -1,29 +1,40 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
-    property string room: "1PN"
+    property string room: "DL3PN"
 //    property var imgList : []
     Component.onCompleted: {
-        console.log("phong ngu 1")
+        console.log("phong duplex 3 PN")
         console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
         TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
     }
 //    property var imgList: [
-//        "image/NoiThat/1PN/1.jpg",
-//        "image/NoiThat/1PN/2.jpg",
-//        "image/NoiThat/1PN/3.jpg",
-//        "image/NoiThat/1PN/4.jpg",
-//        "image/NoiThat/1PN/5.jpg",
-//        "image/NoiThat/1PN/6.jpg",
-//        "image/NoiThat/1PN/7.jpg",
-//        "image/NoiThat/1PN/8.jpg",
-//        "image/NoiThat/1PN/9.jpg",
-//        "image/NoiThat/1PN/10.jpg",
-//        "image/NoiThat/1PN/11.jpg",
-//        "image/NoiThat/1PN/12.jpg",
-//        "image/NoiThat/1PN/13.jpg"
+//        "image/NoiThat/DUPLEX/1.jpg",
+//        "image/NoiThat/DUPLEX/2.jpg",
+//        "image/NoiThat/DUPLEX/3.jpg",
+//        "image/NoiThat/DUPLEX/4.jpg",
+//        "image/NoiThat/DUPLEX/5.jpg",
+//        "image/NoiThat/DUPLEX/6.jpg",
+//        "image/NoiThat/DUPLEX/7.jpg",
+//        "image/NoiThat/DUPLEX/8.jpg",
+//        "image/NoiThat/DUPLEX/9.jpg",
+//        "image/NoiThat/DUPLEX/10.jpg",
+//        "image/NoiThat/DUPLEX/11.jpg",
+//        "image/NoiThat/DUPLEX/12.jpg",
+//        "image/NoiThat/DUPLEX/13.jpg",
+//        "image/NoiThat/DUPLEX/14.jpg",
+//        "image/NoiThat/DUPLEX/15.jpg",
+//        "image/NoiThat/DUPLEX/16.jpg",
+//        "image/NoiThat/DUPLEX/17.jpg",
+//        "image/NoiThat/DUPLEX/18.jpg",
+//        "image/NoiThat/DUPLEX/19.jpg",
+//        "image/NoiThat/DUPLEX/20.jpg",
+//        "image/NoiThat/DUPLEX/21.jpg",
+//        "image/NoiThat/DUPLEX/22.jpg",
+//        "image/NoiThat/DUPLEX/23.jpg",
+//        "image/NoiThat/DUPLEX/24.jpg",
+//        "image/NoiThat/DUPLEX/25.jpg"
 //    ]
-
     Rectangle {
         id :bg
         anchors.fill: parent
@@ -156,30 +167,30 @@ Item {
             }
         }
     }
-    BtnBackOnly {}
-//    Button
-//    {
-//        id: btnBack
-//        width: 0.062 * wW
-//        height: 0.042 * wH
-//        anchors {top: bg.top; topMargin: 0.013 * wH; right: bg.right; rightMargin: 0.008 * wW}
-//        background: Rectangle {
-//            anchors.fill: parent
-//            radius: 6
-//            border.width: 1
-//            border.color: "white"
-//            color: "#9d803e"
-//        }
-//        contentItem: Text {
-//            text: qsTr("QUAY LẠI")
-//            horizontalAlignment: Text.AlignHCenter
-//            verticalAlignment: Text.AlignVCenter
-//            font.pixelSize: btnBack.height * 0.4
-//            color: "white"
-//        }
-//        onClicked: mainStackView.pop()
+    Button
+    {
+        id: btnBack
+        width: 0.062 * wW
+        height: 0.042 * wH
+        anchors {top: bg.top; topMargin: 0.013 * wH; right: bg.right; rightMargin: 0.008 * wW}
+        background: Rectangle {
+            anchors.fill: parent
+            radius: 6
+            border.width: 1
+            border.color: "white"
+            color: "#9d803e"
+        }
+        contentItem: Text {
+            text: qsTr("QUAY LẠI")
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: btnBack.height * 0.4
+            color: "white"
+        }
+        onClicked: mainStackView.pop()
 
-//    }
+    }
 
 
 }
+

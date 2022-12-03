@@ -1,33 +1,40 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
-    property var imgList: [
-        "image/NoiThat/DUPLEX/1.jpg",
-        "image/NoiThat/DUPLEX/2.jpg",
-        "image/NoiThat/DUPLEX/3.jpg",
-        "image/NoiThat/DUPLEX/4.jpg",
-        "image/NoiThat/DUPLEX/5.jpg",
-        "image/NoiThat/DUPLEX/6.jpg",
-        "image/NoiThat/DUPLEX/7.jpg",
-        "image/NoiThat/DUPLEX/8.jpg",
-        "image/NoiThat/DUPLEX/9.jpg",
-        "image/NoiThat/DUPLEX/10.jpg",
-        "image/NoiThat/DUPLEX/11.jpg",
-        "image/NoiThat/DUPLEX/12.jpg",
-        "image/NoiThat/DUPLEX/13.jpg",
-        "image/NoiThat/DUPLEX/14.jpg",
-        "image/NoiThat/DUPLEX/15.jpg",
-        "image/NoiThat/DUPLEX/16.jpg",
-        "image/NoiThat/DUPLEX/17.jpg",
-        "image/NoiThat/DUPLEX/18.jpg",
-        "image/NoiThat/DUPLEX/19.jpg",
-        "image/NoiThat/DUPLEX/20.jpg",
-        "image/NoiThat/DUPLEX/21.jpg",
-        "image/NoiThat/DUPLEX/22.jpg",
-        "image/NoiThat/DUPLEX/23.jpg",
-        "image/NoiThat/DUPLEX/24.jpg",
-        "image/NoiThat/DUPLEX/25.jpg"
-    ]
+    property string room: "D"
+//    property var imgList : []
+    Component.onCompleted: {
+        console.log("phong duplex")
+        console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+        TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+    }
+//    property var imgList: [
+//        "image/NoiThat/DUPLEX/1.jpg",
+//        "image/NoiThat/DUPLEX/2.jpg",
+//        "image/NoiThat/DUPLEX/3.jpg",
+//        "image/NoiThat/DUPLEX/4.jpg",
+//        "image/NoiThat/DUPLEX/5.jpg",
+//        "image/NoiThat/DUPLEX/6.jpg",
+//        "image/NoiThat/DUPLEX/7.jpg",
+//        "image/NoiThat/DUPLEX/8.jpg",
+//        "image/NoiThat/DUPLEX/9.jpg",
+//        "image/NoiThat/DUPLEX/10.jpg",
+//        "image/NoiThat/DUPLEX/11.jpg",
+//        "image/NoiThat/DUPLEX/12.jpg",
+//        "image/NoiThat/DUPLEX/13.jpg",
+//        "image/NoiThat/DUPLEX/14.jpg",
+//        "image/NoiThat/DUPLEX/15.jpg",
+//        "image/NoiThat/DUPLEX/16.jpg",
+//        "image/NoiThat/DUPLEX/17.jpg",
+//        "image/NoiThat/DUPLEX/18.jpg",
+//        "image/NoiThat/DUPLEX/19.jpg",
+//        "image/NoiThat/DUPLEX/20.jpg",
+//        "image/NoiThat/DUPLEX/21.jpg",
+//        "image/NoiThat/DUPLEX/22.jpg",
+//        "image/NoiThat/DUPLEX/23.jpg",
+//        "image/NoiThat/DUPLEX/24.jpg",
+//        "image/NoiThat/DUPLEX/25.jpg"
+//    ]
     Rectangle {
         id :bg
         anchors.fill: parent

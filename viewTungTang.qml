@@ -7,6 +7,7 @@ Item {
     property string nut2
     property string nut3
     property string nut4
+
     Component.onCompleted: {
         nut1 = DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o1").toString()
         nut2 = DataBase.queryFindTang(tableFloor,toaUrl[0],tangMay,"o2").toString()
@@ -77,7 +78,7 @@ Item {
     }
     Image {
         anchors.fill: parent
-        source: "image/DK_theoTang/" + toaUrl[0] + "/" + tangUrl
+        source: "file:///D:/MHV_2022_Data/image/DK_theoTang/" + toaUrl[0] + "/" + tangUrl
     }
     //    Footer {}
     Item {
@@ -121,17 +122,34 @@ Item {
                 width: 0.135 * wW
                 height: 0.056 * wH
                 onClicked: {
+                    imgList.length = 0
                     switch (nut1) {
                     case "1N":
+                        for (var i = 0; i < DataBase.queryNoiThat("tblNoiThat","1PN"); i++)
+                        {
+                            imgList[i] = "file:///D:/MHV_2022_Data/NoiThat/1PN/" + parseInt(i+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu1.qml")
                         break;
                     case "2N":
+                        for (var j = 0; j < DataBase.queryNoiThat("tblNoiThat","2PN"); j++)
+                        {
+                            imgList[j] = "file:///D:/MHV_2022_Data/NoiThat/2PN/" + parseInt(j+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu2.qml")
                         break;
-                    case "LN" :
-                        console.log("phong lanh nan")
-                        break;
+//                    case "LN" :
+//                        for (var c = 0; c < DataBase.queryNoiThat("tblNoiThat","LN"); c++)
+//                        {
+//                            imgList[c] = "file:///D:/MHV_2022_Data/NoiThat/LN/" + parseInt(c+1) + ".jpg"
+//                        }
+//                        mainStackView.push("viewPhongLN.qml")
+//                        break;
                     case "3N":
+                        for (var k = 0; k < DataBase.queryNoiThat("tblNoiThat","3PN"); k++)
+                        {
+                            imgList[k] = "file:///D:/MHV_2022_Data/NoiThat/3PN/" + parseInt(k+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu3.qml")
                         break;
                     case "null":
@@ -146,14 +164,27 @@ Item {
                 width: 0.135 * wW
                 height: 0.056 * wH
                 onClicked: {
+                    imgList.length = 0
                     switch (nut2) {
                     case "2N":
+                        for (var j = 0; j < DataBase.queryNoiThat("tblNoiThat","2PN"); j++)
+                        {
+                            imgList[j] = "file:///D:/MHV_2022_Data/NoiThat/2PN/" + parseInt(j+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu2.qml")
                         break;
                     case "3N":
+                        for (var k = 0; k < DataBase.queryNoiThat("tblNoiThat","3PN"); k++)
+                        {
+                            imgList[k] = "file:///D:/MHV_2022_Data/NoiThat/3PN/" + parseInt(k+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu3.qml")
                         break;
                     case "4N":
+                        for (var a = 0; a < DataBase.queryNoiThat("tblNoiThat","4PN"); a++)
+                        {
+                            imgList[a] = "file:///D:/MHV_2022_Data/NoiThat/4PN/" + parseInt(a+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu4.qml")
                         break;
                     case "D3":
@@ -161,6 +192,13 @@ Item {
                         break;
                     case "D31":
                         console.log("phong Duplex d31")
+                        break;
+                    case "D":
+                        for (var b3 = 0; b3 < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b3++)
+                        {
+                            imgList[b3] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b3+1) + ".jpg"
+                        }
+                        mainStackView.push("viewDuplex.qml")
                         break;
                     case "null":
                         break;
@@ -174,9 +212,14 @@ Item {
                 width: 0.135 * wW
                 height: 0.056 * wH
                 onClicked: {
+                    imgList.length = 0
                     switch(nut3)
                     {
                     case "3N":
+                        for (var k = 0; k < DataBase.queryNoiThat("tblNoiThat","3PN"); k++)
+                        {
+                            imgList[k] = "file:///D:/MHV_2022_Data/NoiThat/3PN/" + parseInt(k+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu3.qml")
                         break;
                     case "D3":
@@ -201,7 +244,18 @@ Item {
                         console.log("phong Duplex 32")
                         break;
                     case "4N":
+                        for (var a = 0; a < DataBase.queryNoiThat("tblNoiThat","4PN"); a++)
+                        {
+                            imgList[a] = "file:///D:/MHV_2022_Data/NoiThat/4PN/" + parseInt(a+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu4.qml")
+                        break;
+                    case "D":
+                        for (var b3 = 0; b3 < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b3++)
+                        {
+                            imgList[b3] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b3+1) + ".jpg"
+                        }
+                        mainStackView.push("viewDuplex.qml")
                         break;
                     case "null":
                         break;
@@ -217,6 +271,7 @@ Item {
                 height: 0.056 * wH
                 onClicked:
                 {
+                    imgList.length = 0
                     switch(nut4)
                     {
                     case "D3":
@@ -235,15 +290,27 @@ Item {
                         console.log("phong Duplex d6")
                         break;
                     case "4N":
+                        for (var a = 0; a < DataBase.queryNoiThat("tblNoiThat","4PN"); a++)
+                        {
+                            imgList[a] = "file:///D:/MHV_2022_Data/NoiThat/4PN/" + parseInt(a+1) + ".jpg"
+                        }
                         mainStackView.push("viewPhongNgu4.qml")
                         break;
                     case "D42":
                         console.log("phong Duplex d42")
                         break;
-                    case "LN":
-                        console.log("phong lanh nan")
-                        break;
+//                    case "LN":
+//                        for (var c = 0; c < DataBase.queryNoiThat("tblNoiThat","LN"); c++)
+//                        {
+//                            imgList[c] = "file:///D:/MHV_2022_Data/NoiThat/LN/" + parseInt(c+1) + ".jpg"
+//                        }
+//                        mainStackView.push("viewPhongLN.qml")
+//                        break;
                     case "D":
+                        for (var b = 0; b < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b++)
+                        {
+                            imgList[b] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b+1) + ".jpg"
+                        }
                         mainStackView.push("viewDuplex.qml")
                         break;
                     case "null":
@@ -271,33 +338,38 @@ Item {
                     width: 0.061 * wW
                     height: 0.055 * wH
                     onClicked: {
-                        switch (parseInt(index+1).toString())
+//                        switch (parseInt(index+1).toString())
+//                        {
+//                        case "1":
+//                            console.log("phong duplex 31")
+//                            break;
+//                        case "2":
+//                            console.log("phong duplex 32")
+//                            break;
+//                        case "3":
+//                            console.log("phong duplex 33")
+//                            break;
+//                        case "4":
+//                            console.log("phong duplex 34")
+//                            break;
+//                        case "5":
+//                            console.log("phong duplex 41")
+//                            break;
+//                        case "6":
+//                            console.log("phong duplex 42")
+//                            break;
+//                        case "7":
+//                            console.log("phong duplex 43")
+//                            break;
+//                        case "8":
+//                            console.log("phong duplex 44")
+//                            break;
+//                        }
+                        for (var b = 0; b < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b++)
                         {
-                        case "1":
-                            console.log("phong duplex 31")
-                            break;
-                        case "2":
-                            console.log("phong duplex 32")
-                            break;
-                        case "3":
-                            console.log("phong duplex 33")
-                            break;
-                        case "4":
-                            console.log("phong duplex 34")
-                            break;
-                        case "5":
-                            console.log("phong duplex 41")
-                            break;
-                        case "6":
-                            console.log("phong duplex 42")
-                            break;
-                        case "7":
-                            console.log("phong duplex 43")
-                            break;
-                        case "8":
-                            console.log("phong duplex 44")
-                            break;
+                            imgList[b] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b+1) + ".jpg"
                         }
+                        mainStackView.push("viewDuplex.qml")
 
                     }
                 }
@@ -319,23 +391,46 @@ Item {
                     height: 0.056 * wH
                     onClicked:
                     {
+                        imgList.length = 0
                         if (toaUrl[0] === "J") {
                             switch (parseInt(index+1).toString())
                             {
                             case "1":
+                                for (var i = 0; i < 13; i++)
+                                {
+                                    imgList[i] = "file:///D:/MHV_2022_Data/NoiThat/1PN/" + parseInt(i+1) + ".jpg"
+                                }
                                 mainStackView.push("viewPhongNgu1.qml")
                                 break;
                             case "2":
+                                for (var j = 0; j < DataBase.queryNoiThat("tblNoiThat","2PN"); j++)
+                                {
+                                    imgList[j] = "file:///D:/MHV_2022_Data/NoiThat/2PN/" + parseInt(j+1) + ".jpg"
+                                }
                                 mainStackView.push("viewPhongNgu2.qml")
                                 break;
                             case "3":
+                                for (var k = 0; k < DataBase.queryNoiThat("tblNoiThat","3PN"); k++)
+                                {
+                                    imgList[k] = "file:///D:/MHV_2022_Data/NoiThat/3PN/" + parseInt(k+1) + ".jpg"
+                                }
                                 mainStackView.push("viewPhongNgu3.qml")
                                 break;
                             case "4":
-                                console.log("phong duplex 3")
+//                                console.log("phong duplex 3")
+                                for (var b = 0; b < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b++)
+                                {
+                                    imgList[b] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b+1) + ".jpg"
+                                }
+                                mainStackView.push("viewDuplex.qml")
                                 break;
                             case "5":
-                                console.log("phong duplex 4")
+                                for (var b1 = 0; b1 < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b1++)
+                                {
+                                    imgList[b1] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b1+1) + ".jpg"
+                                }
+//                                console.log("phong duplex 4")
+                                mainStackView.push("viewDuplex.qml")
                                 break;
                             }
                         }
@@ -344,19 +439,41 @@ Item {
                             switch (parseInt(index+1).toString())
                             {
                             case "1":
+                                for (var j1 = 0; j1 < DataBase.queryNoiThat("tblNoiThat","2PN"); j1++)
+                                {
+                                    imgList[j1] = "file:///D:/MHV_2022_Data/NoiThat/2PN/" + parseInt(j1+1) + ".jpg"
+                                }
                                 mainStackView.push("viewPhongNgu2.qml")
                                 break;
                             case "2":
+                                for (var k1 = 0; k1 < DataBase.queryNoiThat("tblNoiThat","3PN"); k1++)
+                                {
+                                    imgList[k1] = "file:///D:/MHV_2022_Data/NoiThat/3PN/" + parseInt(k1+1) + ".jpg"
+                                }
                                 mainStackView.push("viewPhongNgu3.qml")
                                 break;
                             case "3":
+                                for (var a = 0; a < DataBase.queryNoiThat("tblNoiThat","4PN"); a++)
+                                {
+                                    imgList[a] = "file:///D:/MHV_2022_Data/NoiThat/4PN/" + parseInt(a+1) + ".jpg"
+                                }
                                 mainStackView.push("viewPhongNgu4.qml")
                                 break;
                             case "4":
-                                console.log("phong duplex 3")
+                                for (var b2 = 0; b2 < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b2++)
+                                {
+                                    imgList[b2] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b2+1) + ".jpg"
+                                }
+                                mainStackView.push("viewDuplex.qml")
+//                                console.log("phong duplex 3")
                                 break;
                             case "5":
-                                console.log("phong duplex 4")
+                                for (var b3 = 0; b3 < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b3++)
+                                {
+                                    imgList[b3] = "file:///D:/MHV_2022_Data/NoiThat/DUPLEX/" + parseInt(b3+1) + ".jpg"
+                                }
+                                mainStackView.push("viewDuplex.qml")
+//                                console.log("phong duplex 4")
                                 break;
                             }
                         }

@@ -8,7 +8,7 @@ Item {
         anchors.fill: parent
         color: "#CCCCCC"
         Component.onCompleted:   {
-            PdfProvider.loadFile("anhGiaodien.pdf",
+            PdfProvider.loadFile("D:/MHV_2022_Data/pdf/anhGiaodien.pdf",
                                  wW, wH, 0)
             pdfModel.clear()
             for (var i=0;i<PdfProvider.pageCnt;++i) {
@@ -24,7 +24,7 @@ Item {
             id: btnBack
             width: 0.062 * wW
             height: 0.042 * wH
-            anchors {top: parent.top; topMargin: 0.013 * wH; right: parent.right; rightMargin: 0.008 * wW}
+            anchors {bottom: parent.bottom; bottomMargin: 0.013 * wH; right: parent.right; rightMargin: 0.008 * wW}
             background: Rectangle {
                 anchors.fill: parent
                 radius: 6

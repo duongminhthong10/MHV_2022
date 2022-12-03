@@ -47,7 +47,7 @@ Item {
     Image {
         id: bg
         anchors.fill: parent
-        source: "image/DK_toaNha/" + toaUrl
+        source: "file:///D:/MHV_2022_Data/image/DK_toaNha/" + toaUrl
     }
     //    Footer {}
     Item {

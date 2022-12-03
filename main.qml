@@ -19,15 +19,18 @@ ApplicationWindow {
     property string tangUrl
     property string tangMay
 
+    // danh sach anh phong noi that
+    property var imgList : []
+
     // cac table DB
     property string tablebuilding : "tblViewBuilding"
     property string tableFloor: "tblFloorPort"
     /*viet them*/
     property string tableCong: "tblPhong"
     property int option
-//    Component.onCompleted: {
-//        TcpClient.send("HU01")
-//    }
+    //    Component.onCompleted: {
+    //        TcpClient.send("HU01")
+    //    }
 
     StackView {
         id: mainStackView
@@ -36,7 +39,7 @@ ApplicationWindow {
         onDepthChanged: {
             if(depth == 1)
             {
-                TcpClient.send("HU04")
+                TcpClient.send("HU01")
             }
         }
 

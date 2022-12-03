@@ -7,24 +7,24 @@ Item {
         console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
         TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
     }
-    property var imgList: [
-        "image/NoiThat/4PN/1.jpg",
-        "image/NoiThat/4PN/2.jpg",
-        "image/NoiThat/4PN/3.jpg",
-        "image/NoiThat/4PN/4.jpg",
-        "image/NoiThat/4PN/5.jpg",
-        "image/NoiThat/4PN/6.jpg",
-        "image/NoiThat/4PN/7.jpg",
-        "image/NoiThat/4PN/8.jpg",
-        "image/NoiThat/4PN/9.jpg",
-        "image/NoiThat/4PN/10.jpg",
-        "image/NoiThat/4PN/11.jpg",
-        "image/NoiThat/4PN/12.jpg",
-        "image/NoiThat/4PN/13.jpg",
-        "image/NoiThat/4PN/14.jpg",
-        "image/NoiThat/4PN/15.jpg",
-        "image/NoiThat/4PN/16.jpg"
-    ]
+//    property var imgList: [
+//        "image/NoiThat/4PN/1.jpg",
+//        "image/NoiThat/4PN/2.jpg",
+//        "image/NoiThat/4PN/3.jpg",
+//        "image/NoiThat/4PN/4.jpg",
+//        "image/NoiThat/4PN/5.jpg",
+//        "image/NoiThat/4PN/6.jpg",
+//        "image/NoiThat/4PN/7.jpg",
+//        "image/NoiThat/4PN/8.jpg",
+//        "image/NoiThat/4PN/9.jpg",
+//        "image/NoiThat/4PN/10.jpg",
+//        "image/NoiThat/4PN/11.jpg",
+//        "image/NoiThat/4PN/12.jpg",
+//        "image/NoiThat/4PN/13.jpg",
+//        "image/NoiThat/4PN/14.jpg",
+//        "image/NoiThat/4PN/15.jpg",
+//        "image/NoiThat/4PN/16.jpg"
+//    ]
     Rectangle {
         id :bg
         anchors.fill: parent

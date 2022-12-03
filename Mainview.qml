@@ -59,7 +59,7 @@ Item {
                     {
                         if (index === 5)
                         {
-                            TcpClient.send("HU04")
+                            TcpClient.send("HU01")
                             test.start()
                         }
                         else if (index === 0)
