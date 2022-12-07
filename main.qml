@@ -32,6 +32,8 @@ ApplicationWindow {
     //        TcpClient.send("HU01")
     //    }
 
+    // tim loai phong
+    property string room: ""
     StackView {
         id: mainStackView
         anchors.fill: parent

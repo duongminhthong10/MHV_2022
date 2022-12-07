@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
-    property string room: "D"
+//    property string room: "D"
 //    property var imgList : []
     Component.onCompleted: {
         console.log("phong duplex")

@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 Item {
-    property string room: "2PN"
+//    property string room: "2PN"
     Component.onCompleted: {
         console.log("phong ngu 2")
         console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
