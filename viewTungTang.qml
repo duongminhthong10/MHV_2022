@@ -140,13 +140,17 @@ Item {
                         }
                         mainStackView.push("viewPhongNgu2.qml")
                         break;
-//                    case "LN" :
+                    case "LN" :
+                        room = "LN"
 //                        for (var c = 0; c < DataBase.queryNoiThat("tblNoiThat","LN"); c++)
 //                        {
 //                            imgList[c] = "file:///D:/MHV_2022_Data/NoiThat/LN/" + parseInt(c+1) + ".jpg"
 //                        }
-//                        mainStackView.push("viewPhongLN.qml")
-//                        break;
+                        //mainStackView.push("viewPhongLN.qml")
+                        console.log("phong lanh nan")
+                        console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+                        TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+                        break;
                     case "3N":
                         room = "3PN"
                         for (var k = 0; k < DataBase.queryNoiThat("tblNoiThat","3PN"); k++)
@@ -374,13 +378,17 @@ Item {
                         mainStackView.push("viewDuplex.qml")
                         console.log("phong Duplex d42")
                         break;
-//                    case "LN":
+                    case "LN":
+                        room = "LN"
 //                        for (var c = 0; c < DataBase.queryNoiThat("tblNoiThat","LN"); c++)
 //                        {
 //                            imgList[c] = "file:///D:/MHV_2022_Data/NoiThat/LN/" + parseInt(c+1) + ".jpg"
 //                        }
-//                        mainStackView.push("viewPhongLN.qml")
-//                        break;
+                        console.log("phong lanh nan")
+                        console.log(DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+                        TcpClient.sendOnly(option, "DKTC_" + DataBase.queryCacLoaiPhong(tableCong,toaUrl[0],tangMay,room,"mapCongArray"))
+                        //mainStackView.push("viewPhongLN.qml")
+                        break;
                     case "D":
                         for (var b = 0; b < DataBase.queryNoiThat("tblNoiThat","DUPLEX"); b++)
                         {
