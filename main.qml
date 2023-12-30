@@ -1,15 +1,16 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+//import QtMultimedia 5.15
 
 ApplicationWindow {
     id: appwindow
     visible: true
 //    visibility: "FullScreen"
+    visibility: active ? "FullScreen" : "Maximized"
     width: 1280
     height: 800
     title: qsTr("SunShine Diamond River")
-
     property alias wW: appwindow.width
     property alias wH: appwindow.height
     property double x_default: 0.85
